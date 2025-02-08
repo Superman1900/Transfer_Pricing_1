@@ -354,7 +354,7 @@ header .navbar {
 
 .hero-section .button.order-now {
     background: var(--primary-color);
-    color: var(--white-color);
+    color: #c82333;
 }
 
 .hero-section .button.contact-us {
