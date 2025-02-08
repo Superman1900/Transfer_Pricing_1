@@ -1,0 +1,506 @@
+<!--
+1) Write ! then press Tab to get default html
+2) to get tags with class--- nav.navbar press tab
+3) for 1 tag --- a then tab
+4) Emoji -- control command and space
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaxAI | Transfer Pricing</title>
+    <!-- linking Font Awesome for icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!--linking Swiper CSS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header / Navbar -->
+    <header> 
+        <nav class="navbar section-content">
+            <a href="#" class="nav-logo">
+                <h2 class="logo-text"> ☯︎TaxAI</h2>
+            </a>
+                <ul class="nav-menu">
+                    <button id="menu-close-button" class="fas fa-times"></button> <!--Font Awesome icon (fa-times) makes it look like an "X" symbol without any text inside.-->
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Home</a>   
+                    </li>
+                    <li class="nav-item">
+                        <a href="#approach" class="nav-link">Approach</a>   
+                    </li>
+                    <li class="nav-item">
+                        <a href="#menu" class="nav-link">Services</a>   
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#pricing" class="nav-link">Pricing</a>
+                    </li>   
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">About</a>
+                    </li>
+                    <!--
+                    <li class="nav-item">
+                        <a href="#testimonials" class="nav-link">Team</a>   
+                    </li>
+                    <li class="nav-item">
+                        <a href="#gallery" class="nav-link">Cases</a>   
+                    </li>
+
+                    -->
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Contact</a>   
+                    </li>
+                </ul>
+
+                <button id="menu-open-button" class="fas fa-bars"></button> <!--The fa-bars icon appears as three horizontal lines for menu-->
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero section -->
+        <section class="hero-section">
+            <div class="section-content">
+                <div class="hero-details">
+                    <h2 class="title">Comprehensive Transfer Pricing Solutions</h2>
+                    <h3 class="subtitle">Tailored to Meet Your Business Needs with Maximum Efficiency and Cost-Effectiveness</h3>
+                    <p class="description">By leveraging cutting-edge technology, we create custom transfer pricing solutions that are not only aligned with 
+                        your business structure but also maximize efficiency and reduce costs. Our technology-driven approach ensures that you stay compliant 
+                        while saving time and resources, making the process both seamless and economically advantageous.</p>
+                    
+                    <!-- Highlight Pricing with a Callout Box -->
+                    <div class="pricing-callout">
+                        <p class="pricing-text">Pricing starts at <span class="highlight">$500 per report</span>!</p>
+                        <p class="pricing-subtext">Affordable, Transparent, and Tailored to Your Needs</p>
+                    </div>
+
+                    <!-- Pay After Service Feature -->
+                    <div class="pay-after-service">
+                        <p class="pay-text"><strong>Pay After Service:</strong> Get your deliverables first, pay only when you’re satisfied!</p>
+                        <p class="pay-subtext">No upfront payment required – risk-free and hassle-free.</p>
+                    </div>
+        
+                    <!-- Buttons with Icons -->
+                    <div class="buttons">
+                        <a href="#pricing" class="button order-now">
+                            <i class="fas fa-dollar-sign"></i> Check Pricing
+                        </a>
+                        <a href="#contact" class="button contact-us">
+                            <i class="fas fa-envelope"></i> Contact Us
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+<!--
+        <section class="cta-section">
+            <div class="section-content">
+                <h2 class="cta-title">Get Started Today</h2>
+                <p class="cta-text">Transform your transfer pricing process with our affordable, technology-driven solutions. Pricing starts at just $500 per report!</p>
+                <a href="#contact" class="cta-button">Request a Free Consultation</a>
+            </div>
+        </section> -->
+
+         <!--Our Approach section ...id is added so that links can clicked from nav bar -->
+         <section class="about-section" id="approach">
+            <div class="section-content">
+              <div class="about-image-wrapper">
+                <img src="images/about1-image.jpg" alt="About" 
+                class="about-image">
+              </div>
+              <div class="about-details">
+                <h2 class="section-title">Our Approach</h2>
+                <p class="text"> At TaxAI, we prioritize a strategic and dynamic approach to transfer pricing that 
+                    adapts to changes in the regulatory, business, and operational environment. We believe transfer pricing compliance 
+                    should go beyond ticking boxes—it must serve as a first line of defense in audits, minimize risks, and align with 
+                    your broader tax strategy. Our process focuses on creating flexible, risk-based documentation programs tailored to 
+                    your business operations and global value chain. By employing heat maps and tiered risk assessments, we ensure your 
+                    efforts are focused where they matter most, optimizing compliance while controlling costs.</p>
+
+                <p class="text">We integrate modular and standardized solutions, such as regional benchmarking and centralized documentation 
+                    templates, to enhance efficiency and consistency across jurisdictions. Leveraging advanced tools like TP Doc Generator, Power BI, LoanRat,
+                    and AI-driven analytics, we streamline processes for Local Files, Master Files, and Country-by-Country Reporting (CbCr). 
+                    This approach not only ensures compliance but also equips you with actionable insights for effective tax rate management 
+                    and audit defense. With a commitment to innovation and a deep understanding of global tax frameworks, we help you stay 
+                    ahead in the evolving transfer pricing landscape.
+                
+
+                     
+                </p>
+
+              </div>
+
+            </div>
+         </section>
+
+<!-- Menu section -->
+<section class="menu-section" id="menu">
+    <h2 class="section-title">Our Services</h2>
+    <div class="section-content">
+        <ul class="menu-list">
+            <!-- Service 1 -->
+            <li class="menu-item">
+                <div class="service-card">
+                    <i class="fas fa-file-alt service-icon"></i>
+                    <h3 class="name">Transfer Pricing Documentation</h3>
+                    <p class="text">We help businesses meet global compliance standards by preparing robust, defensible, and regulator-ready transfer pricing documentation.</p>
+                </div>
+            </li>
+
+            <!-- Service 2 -->
+            <li class="menu-item">
+                <div class="service-card">
+                    <i class="fas fa-chart-line service-icon"></i>
+                    <h3 class="name">CbCr Reporting</h3>
+                    <p class="text">We specialize in preparing CbCr reports that comply with OECD and local regulations, ensuring efficiency and accuracy.</p>
+                </div>
+            </li>
+
+            <!-- Service 3 -->
+            <li class="menu-item">
+                <div class="service-card">
+                    <i class="fas fa-tachometer-alt service-icon"></i>
+                    <h3 class="name">Transfer Pricing Dashboard</h3>
+                    <p class="text">Our customized dashboards provide real-time visualization and deep insights into your transfer pricing metrics.</p>
+                </div>
+            </li>
+
+            <!-- Service 4 -->
+            <li class="menu-item">
+                <div class="service-card">
+                    <i class="fas fa-project-diagram service-icon"></i>
+                    <h3 class="name">Transfer Pricing Planning</h3>
+                    <p class="text">Proactive transfer pricing planning helps mitigate risks and identify opportunities for tax efficiency.</p>
+                </div>
+            </li>
+
+            <!-- Service 5 -->
+            <li class="menu-item">
+                <div class="service-card">
+                    <i class="fas fa-cogs service-icon"></i>
+                    <h3 class="name">Transfer Pricing Policy Design</h3>
+                    <p class="text">We collaborate with you to design transfer pricing policies tailored to your business model and operational structure.</p>
+                </div>
+            </li>
+
+            <!-- Service 6 -->
+            <li class="menu-item">
+                <div class="service-card">
+                    <i class="fas fa-tasks service-icon"></i>
+                    <h3 class="name">Transfer Pricing Policy Implementation</h3>
+                    <p class="text">We assist in embedding transfer pricing policies into your financial and operational systems, ensuring seamless execution.</p>
+                </div>
+            </li>
+
+            <!-- Service 7 -->
+            <li class="menu-item">
+                <div class="service-card">
+                    <i class="fas fa-balance-scale service-icon"></i>
+                    <h3 class="name">Loan Benchmarking</h3>
+                    <p class="text">We perform in-depth benchmarking analyses to establish arm's-length pricing for your intercompany transactions.</p>
+                </div>
+            </li>
+
+            <!-- Service 8 -->
+            <li class="menu-item">
+                <div class="service-card">
+                    <i class="fas fa-robot service-icon"></i>
+                    <h3 class="name">Automation of Transfer Pricing Tasks</h3>
+                    <p class="text">Leverage the power of technology to streamline repetitive transfer pricing tasks and improve accuracy.</p>
+                </div>
+            </li>
+
+            <!-- Service 9 -->
+            <li class="menu-item">
+                <div class="service-card">
+                    <i class="fas fa-search service-icon"></i>
+                    <h3 class="name">Review Documentation and Ad-Hoc Services</h3>
+                    <p class="text">We provide tailored solutions to address your unique needs, including reviewing documentation and ad-hoc challenges.</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<!-- Pricing section -->
+<section class="pricing-section" id="pricing">
+    <h2 class="section-title">Pricing*</h2>
+    <div class="section-content">
+        <div class="pricing-grid">
+            <!-- Transfer Pricing Documentation -->
+            <div class="pricing-card">
+                <div class="card-header">
+                    <i class="fas fa-file-alt card-icon"></i>
+                    <h3 class="service-name">Transfer Pricing Documentation</h3>
+                </div>
+                <div class="card-body">
+                    <ul class="pricing-details">
+                        <li><strong>Compilation:</strong> $500 (1 transaction) + $200/additional</li>
+                        <li><strong>Generalized Report:</strong> $1,200 (1 transaction) + $500/additional</li>
+                        <li><strong>Module Preparation:</strong> $500 (1 transaction) + $400/additional</li>
+                        <li><strong>Fully Customized:</strong> $250/hr</li>
+                        <li><strong>General Benchmark:</strong> $5,000</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- CbCR Report Preparation -->
+            <div class="pricing-card">
+                <div class="card-header">
+                    <i class="fas fa-chart-line card-icon"></i>
+                    <h3 class="service-name">CbCR Report Preparation</h3>
+                </div>
+                <div class="card-body">
+                    <ul class="pricing-details">
+                        <li><strong>1–10 Entities:</strong> $2,500</li>
+                        <li><strong>11–25 Entities:</strong> $5,000</li>
+                        <li><strong>26–50 Entities:</strong> $10,000</li>
+                        <li><strong>50+ Entities:</strong> Starting at $15,000</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Transfer Pricing Dashboard -->
+            <div class="pricing-card">
+                <div class="card-header">
+                    <i class="fas fa-tachometer-alt card-icon"></i>
+                    <h3 class="service-name">Transfer Pricing Dashboard</h3>
+                </div>
+                <div class="card-body">
+                    <ul class="pricing-details">
+                        <li><strong>1–10 Entities:</strong> $7,500–$10,000</li>
+                        <li><strong>11–25 Entities:</strong> $15,000–$20,000</li>
+                        <li><strong>26+ Entities:</strong> $25,000–$50,000</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Transfer Pricing Planning -->
+            <div class="pricing-card">
+                <div class="card-header">
+                    <i class="fas fa-project-diagram card-icon"></i>
+                    <h3 class="service-name">Transfer Pricing Planning</h3>
+                </div>
+                <div class="card-body">
+                    <ul class="pricing-details">
+                        <li><strong>Simple Plan:</strong> $5,000–$10,000</li>
+                        <li><strong>Complex Plan:</strong> $20,000–$50,000+</li>
+                        <li><strong>Custom Quotes:</strong> Tailored to your needs</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Transfer Pricing Policy Design -->
+            <div class="pricing-card">
+                <div class="card-header">
+                    <i class="fas fa-cogs card-icon"></i>
+                    <h3 class="service-name">Transfer Pricing Policy Design</h3>
+                </div>
+                <div class="card-body">
+                    <ul class="pricing-details">
+                        <li><strong>Simple Policy:</strong> $5,000–$10,000</li>
+                        <li><strong>Comprehensive Policy:</strong> $15,000–$40,000+</li>
+                        <li><strong>Custom Quotes:</strong> Tailored to your needs</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Transfer Pricing Policy Implementation -->
+            <div class="pricing-card">
+                <div class="card-header">
+                    <i class="fas fa-tasks card-icon"></i>
+                    <h3 class="service-name">Transfer Pricing Policy Implementation</h3>
+                </div>
+                <div class="card-body">
+                    <ul class="pricing-details">
+                        <li><strong>Basic Implementation:</strong> $5,000–$10,000</li>
+                        <li><strong>Comprehensive Implementation:</strong> $20,000–$50,000+</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Loan Benchmarking -->
+            <div class="pricing-card">
+                <div class="card-header">
+                    <i class="fas fa-balance-scale card-icon"></i>
+                    <h3 class="service-name">Loan Benchmarking</h3>
+                </div>
+                <div class="card-body">
+                    <ul class="pricing-details">
+                        <li><strong>Standard Benchmarking:</strong> $3,000–$4,000</li>
+                        <li><strong>Advanced Benchmarking:</strong> $7,000+</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Automation of Transfer Pricing Tasks -->
+            <div class="pricing-card">
+                <div class="card-header">
+                    <i class="fas fa-robot card-icon"></i>
+                    <h3 class="service-name">Automation of Transfer Pricing Tasks</h3>
+                </div>
+                <div class="card-body">
+                    <ul class="pricing-details">
+                        <li><strong>Basic Automation:</strong> $5,000–$15,000</li>
+                        <li><strong>Comprehensive Automation:</strong> $20,000–$50,000+</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Review Documentation and Ad-Hoc Services -->
+            <div class="pricing-card">
+                <div class="card-header">
+                    <i class="fas fa-search card-icon"></i>
+                    <h3 class="service-name">Review Documentation and Ad-Hoc Services</h3>
+                </div>
+                <div class="card-body">
+                    <ul class="pricing-details">
+                        <li><strong>Hourly Rate:</strong> $250/hr</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<p class="pricing-footnote">
+    *The pricing provided is indicative and may vary based on the specific requirements, scope, and complexity of the services requested. Actual pricing will be determined upon further discussion and assessment of the project.
+</p>
+</section>
+
+
+    </div>
+</section>
+
+        <!--About section ...id is added so that links can clicked from nav bar -->
+        <section class="about-section" id="about">
+        <div class="section-content">
+            <div class="about-image-wrapper">
+            <img src="images/about3-image.jpg" alt="About" 
+            class="about-image">
+            </div>
+            <div class="about-details">
+            <h2 class="section-title">About Us</h2>
+            <p class="text"> At TaxAI, we specialize in providing tailored transfer pricing solutions to help 
+                businesses navigate the complexities of global tax regulations. With extensive experience in international 
+                tax frameworks and a team of seasoned professionals, we deliver services that ensure compliance, minimize 
+                risks, and optimize financial performance. Whether it’s documentation, policy design, benchmarking, or 
+                leveraging technology, we create strategies that align with your business goals and regulatory requirements.</p>
+
+            <p class="text">Innovation is at the heart of what we do. By integrating advanced tools like Power BI, Python, and AI-driven 
+                analytics, we provide cutting-edge solutions that streamline processes, automate tasks, and offer actionable 
+                insights. With a global perspective and local expertise, we are your trusted partner in transfer pricing, 
+                delivering value-added services that empower your business to thrive in an ever-evolving regulatory landscape.
+            
+
+                    
+            </p>
+
+
+            </div>
+
+        </div>
+        </section>
+         
+
+
+<!-- Contact section -->
+<section class="contact-section" id="contact">
+    <h2 class="section-title">Contact Us</h2>
+    <div class="section-content">
+        <form method="post" 
+              class="contact-form" 
+              name="contact-form"
+              target="hidden_iframe"
+              onsubmit="return handleFormSubmit();">
+            
+            <input type="text" name="entry.1061152251" placeholder="Your name" class="form-input" required>
+            <input type="text" name="entry.476965789" placeholder="Your company" class="form-input" required>
+            <input type="email" name="entry.694813244" placeholder="Your email" class="form-input" required>
+            <input type="tel" name="entry.740097013" placeholder="Your phone number (Optional)" class="form-input">
+            <textarea name="entry.2018777564" placeholder="Your message" class="form-input" required></textarea>
+
+            <button type="submit" class="submit-button" id="submit-button">Submit</button>
+        </form>
+        <p id="success-message" style="display: none; color: green; font-weight: bold; margin-top: 10px;">
+            Thank you! Your message has been sent.
+        </p>
+    </div>
+</section>
+
+<!-- Hidden iframe to detect when the form is submitted -->
+<iframe name="hidden_iframe" style="display:none;" onload="formSubmitted();"></iframe>
+
+        
+
+
+
+         <!--Footer-->
+         <footer class="footer-section">
+            <div class="section-content">
+                <p class="copyright-text">©Transfer Pricing</p>
+
+
+
+                <p class="policy-text">
+                    <a href="#" class="policy-link">Privacy Policy</a>
+                    <span class="separator">.</span>
+                    <a href="#" class="policy-link">Refund policy</a>
+                </p>
+            </div>
+         </footer>
+
+    </main>
+
+    <!--Linking Swiper script-->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+   
+
+    <!--Linking custom script-->
+
+    <script src="script.js"></script>
+    
+
+    <script src="config.js"></script>
+
+    <script>
+        // Dynamically set the action URL using the variable from config.js
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelector('.contact-form').action = formActionURL;
+        });
+    
+        function handleFormSubmit() {
+            // Disable submit button to prevent multiple submissions
+            document.getElementById("submit-button").disabled = true;
+            document.getElementById("submit-button").innerText = "Submitting...";
+            return true; // Allow form submission
+        }
+    
+        function formSubmitted() {
+            // Reset form fields
+            document.querySelector('.contact-form').reset();
+            
+            // Show success message
+            document.getElementById('success-message').style.display = 'block';
+            
+            // Re-enable submit button
+            document.getElementById("submit-button").disabled = false;
+            document.getElementById("submit-button").innerText = "Submit";
+    
+            // Hide success message after 5 seconds
+            setTimeout(() => {
+                document.getElementById('success-message').style.display = 'none';
+            }, 5000);
+        }
+    </script>
+    
+
+    
+</body>
+</html>

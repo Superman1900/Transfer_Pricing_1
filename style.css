@@ -1,0 +1,1014 @@
+/* Import google fonts*/
+
+@import url('https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+* {
+    font-family: "Poppins", serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* This ensures that padding and width is always included in the dimenions of the element. More content will not increase it */
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    /* Colors */
+    --white-color: #ffffff; /* Clean, neutral white for bright backgrounds */
+    --dark-color: #6b7280; /* Light slate gray for softer, readable text in services section */
+    --primary-color: #336699; /* Muted deep blue for headers and key branding elements */
+    --secondary-color: #0084cc; /* Vibrant sky blue for buttons and interactive elements */
+    --light-gray-color: #f0f4f8; /* Soft, light gray-blue for subtle background contrast */
+    --medium-gray-color: #d1d5db; /* Calm medium gray for dividers or secondary text */
+    
+    
+    
+
+    /* Font size */
+    --font-size-s: 0.9rem;
+    --font-size-n: 1rem;
+    --font-size-m: 1.12rem;
+    --font-size-l: 1.5rem;
+    --font-size-xl: 2rem;
+    --font-size-xxl: 2.3rem;
+
+    /* Font weight */
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    /* Border radius */
+    --border-radius-s: 8px;
+    --border-radius-m: 30px;
+    --border-radius-circle: 50%;
+
+    /* Site max width */
+    --site-max-width: 1300px;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Styling for whole sheet */
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+img {
+    width: 100%;
+
+}
+
+.section-content {
+   max-width: var(--site-max-width);
+   margin: 0 auto;
+   padding: 0 20px;
+
+
+}
+
+/* About content modificaitons */
+
+.section-title {
+    text-align: center;
+    padding: 60px 0 100px;
+    text-transform: uppercase;
+    font-size: var(--font-size-xl);
+}
+
+.section-title::after { /* creates a line below About US */
+    content: "";
+    width: 80px;
+    height: 5px;
+    display: block;
+    margin: 10px auto;
+    border-radius: var(--border-radius-s);
+    background: var(--secondary-color);
+
+}
+
+/* navbar styling */
+
+header {
+    position: fixed; /*If you scroll down a page, the header will stay visible at the top of the screen instead of moving with the rest of the page content. */
+    width: 100%;
+    z-index: 5;
+    background: var(--primary-color);
+}
+
+header .navbar {
+    display: flex; /* rows to columns*/
+    padding: 20px;
+    align-items: center; /* move items to middle of the background*/
+    justify-content: space-between; /* move logo and bar to oppsite ends*/
+}
+
+.navbar .nav-logo .logo-text {
+    color: var(--white-color);
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-semibold);
+}
+
+.navbar .nav-menu {
+    display :flex; /* make menu items from vertical to horizontal*/
+    gap: 10px;
+}
+
+.navbar .nav-menu .nav-link {
+    color: var(--white-color);
+    padding: 10px 18px; /* Create more difference between nav items*/
+    border-radius: var(--border-radius-m) ;
+    font-size: var(--font-size-m);
+    transition: 0.3s ease;
+
+}
+
+.navbar .nav-menu .nav-link:hover{
+    color: var(--primary-color);
+    background: var(--secondary-color);
+}
+
+.navbar :Where(#menu-close-button, #menu-open-button) {
+    display: none; /* Not to display these when screen is big */
+}
+
+/* Hero section */
+.hero-section {
+    min-height: 100vh;
+    background-color: var(--primary-color); /* Fallback color */
+    background-image: url('./images/jason-goodman-wVh5grSMYaY-unsplash.jpg'); /* Relative path */
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    color: var(--white-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Required for the overlay */
+    padding-top: 100px;
+    padding-bottom: 20px;
+}
+
+/* Add a semi-transparent white overlay */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3); /* White overlay with 70% opacity */
+    z-index: 1; /* Ensure the overlay is above the background image */
+}
+
+/* Ensure the text is above the overlay */
+.hero-section .section-content {
+    position: relative;
+    z-index: 2; /* Ensure the text is above the overlay */
+}
+
+.hero-section .hero-details {
+    max-width: 60%;
+    padding: 20px; /* Add padding */
+    background: rgba(255, 255, 255, 0.8); /* Optional: Add a semi-transparent white background to the text container */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    color: #333333; /* Dark text for better contrast */
+}
+
+.hero-section .hero-details .title {
+    font-size: var(--font-size-xxl);
+    color: #333333; /* Dark text */
+    font-family: 'Arial', 'Helvetica', 'Verdana', sans-serif;
+    font-weight: var(--font-weight-bold);
+    line-height: 1.2;
+}
+
+.hero-section .hero-details .subtitle {
+    margin-top: 8px;
+    max-width: 100%;
+    font-size: var(--font-size-l);
+    font-weight: var(--font-weight-semibold);
+    color: #333333; /* Dark text */
+    line-height: 1.2;
+}
+
+.hero-section .hero-details .description {
+    max-width: 100%;
+    margin: 24px 0 40px;
+    font-size: var(--font-size-m);
+    text-align: justify;
+    color: #333333; /* Dark text */
+    line-height: 1.4;
+}
+
+.hero-section .hero-details .buttons {
+    display: flex;
+    gap: 23px;
+    margin-top: 30px;
+}
+
+.hero-section .hero-details .button {
+    padding: 10px 26px;
+    border: 2px solid transparent;
+    color: var(--primary-color);
+    border-radius: var(--border-radius-m);
+    background: var(--secondary-color);
+    font-weight: var(--font-weight-medium);
+}
+
+.hero-section .hero-details .button:hover,
+.hero-section .hero-details .contact-us {
+    color: var(--white-color);
+    border-color: var(--white-color);
+    background: transparent;
+}
+
+.hero-section .hero-details .contact-us:hover {
+    color: var(--primary-color);
+    border-color: var(--secondary-color);
+    background: var(--secondary-color);
+}
+
+.hero-section .hero-image-wrapper {
+    display: none; /* Hide the image wrapper since we're using a background image */
+}
+
+/* Hero Section Enhancements */
+.hero-section .hero-details {
+    max-width: 60%;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.hero-section .title {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.hero-section .subtitle {
+    font-size: 1.5rem;
+    color: var(--dark-color);
+    margin-bottom: 20px;
+}
+
+.hero-section .description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--dark-color);
+    margin-bottom: 30px;
+}
+
+/* Pricing Callout Box */
+.pricing-callout {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    margin-bottom: 20px;
+    border-left: 5px solid #d9534f; /* Red border for emphasis */
+    transition: transform 0.3s ease-in-out;
+}
+
+.pricing-callout:hover {
+    transform: scale(1.05);
+}
+
+.pricing-callout .pricing-text {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #d9534f; /* Red highlight */
+}
+
+.pricing-callout .highlight {
+    color: #c82333; /* Darker red */
+}
+
+.pricing-callout .pricing-subtext {
+    font-size: 1rem;
+    color: #777;
+}
+
+/* Pay After Service */
+.pay-after-service {
+    background: #dff0d8; /* Soft green background */
+    padding: 20px;
+    border-radius: 12px;
+    border-left: 5px solid #28a745; /* Green border */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.pay-after-service:hover {
+    transform: scale(1.05);
+}
+
+.pay-after-service .pay-text {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #155724; /* Dark green text */
+}
+
+.pay-after-service .pay-subtext {
+    font-size: 1rem;
+    color: #444;
+}
+
+.hero-section .buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.hero-section .button {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s ease;
+}
+
+.hero-section .button.order-now {
+    background: var(--primary-color);
+    color: var(--white-color);
+}
+
+.hero-section .button.contact-us {
+    background: var(--white-color);
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.hero-section .button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.hero-section .hero-image-wrapper {
+    display: block;
+    max-width: 400px;
+}
+
+.hero-section .hero-image {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* CTA Section Styling 
+.cta-section {
+    background: var(--primary-color);
+    padding: 60px 0;
+    text-align: center;
+}
+
+.cta-section .cta-title {
+    font-size: 2rem;
+    color: var(--white-color);
+    margin-bottom: 20px;
+}
+
+.cta-section .cta-text {
+    font-size: 1.2rem;
+    color: var(--white-color);
+    margin-bottom: 30px;
+}
+
+.cta-section .cta-button {
+    padding: 15px 40px;
+    background: var(--secondary-color);
+    color: var(--white-color);
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: var(--font-weight-bold);
+    transition: 0.3s ease;
+}
+
+.cta-section .cta-button:hover {
+    background: var(--white-color);
+    color: var(--primary-color);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+*/
+
+/* About section styling */
+.about-section {
+    padding: 120px 0;
+    background: var(--light-pink-color);
+    padding-bottom: 50px;
+}
+
+.about-section .section-content {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-section .about-image-wrapper .about-image {
+    width:600px;
+    height: 600px;
+    object-fit:cover;
+    border-radius: var(--border-radius-l);
+
+}
+
+.about-section .about-details .section-title {
+    padding: 0;
+}
+
+.about-section .about-details {
+    max-width: 50%;
+}
+.about-section .about-details .text {
+    line-height: 30px;
+    margin: 50px 0 30px;
+    text-align: justify;
+    font-size: var(--font-size-m);
+}
+
+.about-section .social-link-list{
+    display: flex;
+    gap:25px;
+    justify-content: center;
+}
+
+.about-section .social-link-list .social-link {
+    color:var(--primary-color);
+    font-size: var(--font-size-l);
+    transition: 0.2s ease;
+
+}
+
+.about-section .social-link-list .social-link:hover {
+    color:var(--secondary-color)
+}
+
+/* Menu section styling */
+.menu-section {
+    background: var(--light-gray-color); /* Light background for the section */
+    padding: 50px 0 100px;
+}
+
+.menu-section .menu-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 30px; /* Space between cards */
+    padding: 0 20px;
+}
+
+.menu-section .menu-item {
+    list-style: none;
+}
+
+.menu-section .service-card {
+    background: var(--white-color); /* White background for cards */
+    padding: 30px;
+    border-radius: var(--border-radius-s); /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.menu-section .service-card:hover {
+    transform: translateY(-10px); /* Lift the card on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.menu-section .service-icon {
+    font-size: 48px; /* Icon size */
+    color: var(--primary-color); /* Icon color */
+    margin-bottom: 20px;
+}
+
+.menu-section .name {
+    font-size: var(--font-size-l);
+    font-weight: var(--font-weight-bold);
+    color: var(--primary-color); /* Title color */
+    margin-bottom: 15px;
+}
+
+.menu-section .text {
+    font-size: var(--font-size-m);
+    color: var(--dark-color); /* Text color */
+    margin-bottom: 20px;
+}
+
+/* Pricing Section Styling */
+.pricing-section {
+    background: linear-gradient(135deg, #e0f2ff, #ffffff); /* Light blue gradient */
+    padding: 50px 0; /* Adjusted padding */
+}
+
+.pricing-section .section-title {
+    padding: 80px 0 50px; /* Reduced padding (top and bottom) */
+    text-transform: uppercase;
+    font-size: var(--font-size-xl);
+    color: var(--primary-color);
+}
+
+.pricing-section .section-title::after {
+    content: "";
+    width: 80px;
+    height: 5px;
+    display: block;
+    margin: 10px auto;
+    border-radius: var(--border-radius-s);
+    background: var(--secondary-color);
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.pricing-card {
+    background: var(--white-color);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    padding: 30px;
+    text-align: center;
+    color: var(--white-color);
+}
+
+.card-icon {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.service-name {
+    font-size: var(--font-size-l);
+    font-weight: var(--font-weight-bold);
+    margin: 0;
+}
+
+.card-body {
+    padding: 30px;
+}
+
+.pricing-details {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pricing-details li {
+    font-size: var(--font-size-m);
+    color: var(--dark-color);
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.pricing-details strong {
+    color: var(--primary-color);
+}
+
+.pricing-footnote {
+    font-size: var(--font-size-s);
+    color: var(--dark-color);
+    text-align: center;
+    margin-top: 30px;
+    font-style: italic;
+}
+
+
+/* Contact form styling */
+
+.contact-section {
+    background: var(--light-gray-color); /* Soft gray for a subtle contrast */
+    padding-top: 80px; /* Adjust as needed */
+    padding-bottom: 80px;
+}
+
+.contact-section .section-title {
+    padding-top: 100px;
+    padding: 20px 0px 23px;
+    
+}
+.contact-section .contact-form {
+    max-width: 600px; /* Reduce the width of the form */
+    width: 100%; /* Ensure it doesn't exceed the max-width */
+    margin: 0 auto; /* Center the form horizontally */
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* Space between form fields */
+    padding: 20px; /* Add padding inside the form */
+    background: var(--white-color); /* Optional: Add a background color */
+    border-radius: var(--border-radius-s); /* Optional: Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+
+.contact-section .contact-form .form-input {
+    width: 100%;
+    height: 50px;
+    padding: 0 12px;
+    outline: none;
+    background: var(--white-color);
+    border-radius: var(--border-radius-s);
+    border: 1px solid var(--medium-gray-color);
+    font-size: var(--font-size-m); /* Ensure consistent font size */
+}
+
+.contact-section .contact-form textarea.form-input {
+    height: 100px;
+    padding: 12px;
+    resize: vertical;
+}
+
+.contact-section .contact-form .submit-button {
+    padding: 10px 26px;
+    color: var(--white-color);
+    font-weight: var(--font-weight-medium);
+    background: var(--secondary-color);
+    border-radius: var(--border-radius-m);
+    font-size: var(--font-size-m);
+    border: 1px solid var(--primary-color);
+    transition: 0.3s ease;
+    margin-bottom: 20px; /* Add padding after the submit button */
+}
+
+.contact-section .contact-form .submit-button:hover {
+    color: var(--primary-color);
+    background: transparent;
+}
+
+
+
+/* Footer section styling */
+.footer-section {
+    padding: 20px 0;
+    background: var(--dark-color)
+}
+
+.footer-section .section-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-section :where(.copyright-text, .social-link, .policy-link) {
+    color: var(--white-color);
+    transition: 0.2s ease;
+}
+
+.footer-section .social-link-list {
+    display: flex;
+    gap:25px;
+}
+
+.footer-section .social-link-list .social-link {
+    font-size: var(--font-size-l);
+}
+
+.footer-section .social-link-list .social-link:hover,
+.footer-section .policy-text .policy-link:hover {
+    color: var(--secondary-color);
+}
+
+.footer-section .policy-text .separator {
+    margin: 0 5px;
+    color:var(--white-color)
+
+}
+
+
+
+
+/* Resposnsive media query code for max width 1024px when you reduce the screen size - how navbar will look*/
+@media screen and (max-width:1024px) {
+
+    .menu-section .menu-list{
+        gap: 60px;
+    }
+
+    .menu-section .menu-list .menu-item {
+        width: calc(100% / 3 - 60px);
+    }
+
+}
+
+/* Resposnsive media query code for max width 900px when you reduce the screen size - how navbar will look*/
+@media screen and (max-width:900px){
+
+    :root {
+        --font-size-m: 1rem;
+        --font-size-l: 1.3rem;
+        --font-size-xl: 1.5rem;
+        --font-size-xxl: 1.8rem;
+    }
+
+    body.show-mobile-menu header::before{
+        content:"";
+        position: fixed;
+        left:0;
+        top:0;
+        height:100%;
+        width:100%;
+        backdrop-filter: blur(5px);
+        background: rgba(0,0,0,0.2);
+
+
+    }
+    .navbar :Where(#menu-close-button, #menu-open-button){
+        display: block; /* to show cross and bars menu when screen is small */
+        font-size: var(--font-size-l);
+    }
+
+    .navbar #menu-close-button {
+        position: absolute;
+        right: 30px;
+        top: 30px;
+    }
+
+    .navbar #menu-open-button {
+        color: var(--white-color)
+
+    }
+    .navbar .nav-menu {
+        display: block;
+        position: fixed;
+        left:-300px; /* Once chaged from 0 to -300px, the small menu doesn't show up so adding JS file now for mobile menu*/
+        top:0;
+        width: 300px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 100px;
+        background: var(--white-color);
+        transition: left 0.2s ease;
+    }
+    body.show-mobile-menu .navbar .nav-menu{
+        left:0; /* to show the mobile menu when bars are pressed  for JS file*/
+
+    }
+
+    .navbar .nav-menu .nav-link {
+        color: var(--dark-color);
+        display: block;
+        margin-top: 17px;
+        font-size: var(--font-size-l);
+
+    }
+    
+    .hero-section .section-content { /* To make mobile view better; rearrange the content*/
+        gap: 50px;
+        text-align: center;
+        padding: 30px 20px 20px;
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+
+    .hero-section .hero-details :is(.subtitle, .description), .about-section.about-details, .contact-section .contact-form { /* added about section  as well */
+        max-width: 100%;
+    }
+
+    .hero-section .hero-details .buttons {
+        justify-content: center;
+        max-width: 100%;
+    }
+
+    .hero-section .hero-image-wrapper {
+        max-width: 270px;
+        margin-right: 0;
+
+    }
+
+    /* About section */
+
+    .about-section .section-content {
+        gap: 70px;
+        flex-direction: column; /* See if you want to make image to appear after text "column-reverse*/
+
+    }
+
+    .about-section .about-image-wrapper .about-image {
+        width: 100%;
+        height:100%;
+        max-width:250px;
+        aspect-ratio: 1;;
+    }
+
+    .menu-section .menu-list{
+        gap: 30px;
+    }
+
+    .menu-section .menu-list .menu-item {
+        width: calc(100% / 2 - 30px);
+    }
+
+    .menu-section .menu-list .menu-item .menu-image{
+        max-width: 200px;
+    }
+
+
+
+    /* Contact Us section */
+
+    .contact-section .section-content {
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+
+}
+
+/* Resposnsive media query code for max width 640px when you reduce the screen size - how navbar will look*/
+@media screen and (max-width:640px){
+
+    .menu-section .menu-list{
+        gap: 60px;
+    }
+    .menu-section .menu-list .menu-item, .gallery-section .gallery-list .gallery-item  {
+        width: 100%;
+
+}
+/* Fix this
+    .testimonials-section .slider-wrapper {
+        margin: 0 0 30px;
+
+}
+    .testimonials-section .swiper-slide-button{
+        display: none;
+    }
+*/
+
+/* Footer */
+
+.footer-section .section-content {
+    flex-direction: column;
+    gap: 20px;
+}
+
+}
+
+
+
+
+
+
+
+
+/* New Code added for Mobile */
+
+/* General adjustments for small screens */
+@media screen and (max-width: 900px) {
+    /* Reduce font sizes for better readability */
+    :root {
+        --font-size-s: 0.8rem;
+        --font-size-n: 0.9rem;
+        --font-size-m: 1rem;
+        --font-size-l: 1.2rem;
+        --font-size-xl: 1.5rem;
+        --font-size-xxl: 1.8rem;
+    }
+
+    /* Center-align text for better mobile readability */
+    .section-title, .hero-details, .about-details, .pricing-section, .contact-section {
+        text-align: center;
+    }
+
+    /* Adjust padding and margins for smaller screens */
+    .section-content {
+        padding: 0 15px;
+    }
+
+    /* Make buttons stack vertically on small screens */
+    .buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* Ensure images don't overflow on small screens */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .hero-section {
+        min-height: auto;
+        padding: 60px 0;
+    }
+
+    .hero-section .hero-details {
+        max-width: 100%;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.9); /* Semi-transparent background for better readability */
+    }
+
+    .hero-section .title {
+        font-size: 1.8rem;
+    }
+
+    .hero-section .subtitle {
+        font-size: 1.2rem;
+    }
+
+    .hero-section .description {
+        font-size: 1rem;
+        margin: 20px 0;
+    }
+
+    .hero-section .buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero-section .button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .about-section .section-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .about-section .about-image-wrapper {
+        text-align: center;
+    }
+
+    .about-section .about-image {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .about-section .about-details {
+        max-width: 100%;
+    }
+
+    .about-section .text {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .about-section {
+        padding: 60px 0;
+    }
+
+    .about-section .section-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .about-section .about-image-wrapper {
+        text-align: center;
+    }
+
+    .about-section .about-image {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .about-section .about-details {
+        max-width: 100%;
+    }
+
+    .about-section .text {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+}
